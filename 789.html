@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儂好 - 與農村共生、共好</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .section-title::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: #4CAF50;
+            display: block;
+            margin: 8px auto 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content img {
+            max-width: 100%;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .content img:hover {
+            transform: scale(1.05);
+        }
+        .activity {
+            background: #ffeb3b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .activity:hover {
+            background-color: #fdd835;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>儂好</h1>
+        <p>與農村共生、共好</p>
+    </header>
+    <nav>
+        <a href="#about-us">關於我們</a>
+        <a href="#products">所有商品</a>
+        <a href="#activities">活動內容</a>
+        <a href="#partnerships">與企業合作</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+    <main>
+        <section id="about-us">
+            <h2 class="section-title">關於我們</h2>
+            <h3>品牌故事</h3>
+            <p>發現到的社會問題：鄉村人口老化、勞動力不足、人口外移、農地汙染、農村文化消失、教師流動率高、高風險家庭比例較高，所以成立品牌。</p>
+            <h3>品牌發想</h3>
+            <ul>
+                <li>環境友善</li>
+                <li>氣候變遷</li>
+                <li>產地直送減少碳排，穩定品質</li>
+                <li>農業剩餘資源再利用製造循環經濟</li>
+                <li>客家文化主題，讓老年人再就業像是擔任解說員介紹社區故事</li>
+            </ul>
+            <h3>主題</h3>
+            <p>主題農場虛擬IP（永續發展）</p>
+            <ul>
+                <li>春 - 鳳梨</li>
+                <li>夏 - 西瓜</li>
+                <li>秋 - 柚子</li>
+                <li>冬 - 草莓</li>
+            </ul>
+            <h3>SDGs</h3>
+            <p>3 健康福祉、4 優質教育、12 責任消費及生產、15 保育陸域生態</p>
+            <h3>商業模式</h3>
+            <p>地產地銷</p>
+            <p>農場本身設立主題IP，販售周邊商品（桌遊、包包等商品）和當令農產品銷售。</p>
+        </section>
+        <section id="products">
+            <h2 class="section-title">所有商品</h2>
+            <div class="content">
+                <div>
+                    <h3>文創商品</h3>
+                    <p>包包</p>
+                    <img src="your-image-url.jpg" alt="包包">
+                </div>
+                <div>
+                    <h3>農產品</h3>
+                    <p>草莓</p>
+                    <img src="your-image-url.jpg" alt="草莓">
+                </div>
+            </div>
+        </section>
+        <section id="activities">
+            <h2 class="section-title">活動內容</h2>
+            <div class="content">
+                <div class="activity">
+                    <h3>企業親子活動</h3>
+                    <p>制定主題請小孩和父母共同完成。</p>
+                </div>
+                <div class="activity">
+                    <h3>闖關活動</h3>
+                    <p>設計趣味闖關活動，增進親子互動。</p>
+                </div>
+                <div class="activity">
+                    <h3>實境解謎</h3>
+                    <p>策劃實境解謎遊戲，挑戰智慧與團隊合作。</p>
+                </div>
+                <div class="activity">
+                    <h3>農村體驗活動</h3>
+                    <p>參與農作體驗，了解農村生活，增進環境保護意識。</p>
+                </div>
+            </div>
+        </section>
+        <section id="partnerships">
+            <h2 class="section-title">與企業合作</h2>
+            <h3>合作模式</h3>
+            <ul>
+                <li>與企業的ESG部門合作，員工旅遊或親子日舉辦食農教育活動</li>
+                <li>企業內的員工午餐食材供應、下午茶</li>
+                <li>企業專業資源導入，如全家超市型店鋪販售在地農產品</li>
+                <li>產品優先選擇台灣在地農產</li>
+            </ul>
+            <h3>合作效益</h3>
+            <ul>
+                <li>企業支持當地經濟發展，將年輕人留下</li>
+                <li>公股銀行研習時數（政府規定公家機關人員每年要有至少4小時環境教育時數）</li>
+                <li>助於企業營造品牌形象，並提升價值與影響力</li>
+                <li>不噴灑農藥，保護生態環境</li>
+                <li>透過食農教育活動，照顧員工及其眷屬身心靈，亦能促進合作夥伴永續的經濟增長</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">聯絡我們</h2>
+            <p>如有任何問題或合作需求，請聯絡我們。</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 儂好. 版權所有.</p>
+    </footer>
+</body>
+</html>
