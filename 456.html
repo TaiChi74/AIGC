@@ -29,7 +29,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #82b89f;
         }
         header {
             background: url(https://media.canva.com/v2/image-resize/format:JPG/height:600/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2Fwiez8%2FMAGNCrwiez8%2F1%2Fp.jpg/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAJ9m0CVGcENXpJ4PLsryI6vKiT_1sB2ESTNywKEd8MGL&exp=1723029734&osig=AAAAAAAAAAAAAAAAAAAAAM6dJwh0ZuEs9-xNoeZ_xPFGVZ7teg-s28G-Cx0bJNhu&signer=media-rpc&x-canva-quality=screen) no-repeat center center/cover;
@@ -74,10 +74,27 @@
 
         .section {
 			display: flex;
+			background-color: #c9b67d;	
             position: relative;
             margin-bottom: 7px;
             padding: 10px;  
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		
+		.animate {
+            animation: fadeIn 2s forwards;
+        }
+		
+		@keyframes fadeIn {
+            from {left: 200px;}  
+			to {left: 0px;}
+        }
+		
+		.section:nth-child(odd) {
+            background-color: #c9b67d;
+        }	
+        .section:nth-child(even) {
+            background-color: #85ccc7;
         }
 		
         .swiper-container {
@@ -116,6 +133,11 @@
             padding: 10px;
             background-color: #fff;
         }
+		
+		.card2 {
+            width: 100%;
+			height: 70%;
+        }
 
         /* 自定義分頁器 */
         .swiper-pagination {
@@ -123,6 +145,7 @@
             bottom: 10px; /* 距離底部的距離 */
             transform: translateX(0%); /* 水平居中 */
             display: flex;
+			position: relative;	
             justify-content: center;
             gap: 10px; /* 分頁器項目之間的間距 */
             z-index: 10; /* 確保分頁器在圖片上方 */
@@ -131,7 +154,7 @@
         }
 
         .swiper-pagination-bullet {
-            width: 200px; /* 增加寬度 */
+            width: 180px; /* 增加寬度 */
             height: 6px; /* 增加高度 */
             background-color: #bbb;
             border-radius: 3px;
@@ -267,25 +290,25 @@
                 <div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="card">
-							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 1">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/th.jpg" alt="Image 1">
 								<div class="card-text">農作物大師畫廊(猜謎關卡):小孩畫出主持人指定的農作物,由父母猜出答案,猜中5題則通過關卡</div>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="card">
-							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/upload_8cdddc7af17a11cfcdc82525a4d20236.jpg" alt="Image 2">
 								<div class="card-text">手做關卡:父母與小孩一起製作出一個樹葉的拓印,製作完成的拓印能印在農場準備的帆布袋上</div>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="card">
-							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/width_5353.png" alt="Image 2">
 								<div class="card-text">種植關卡:主持人講解如何種植四季豆,由父母和小孩共同從完成製作盆栽和種植種子</div>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="card">
-							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/width_533.png" alt="Image 2">
 								<div class="card-text">活動獎勵:完成關卡的組別皆可獲得由農場方製作的當季水果製成的冰品</div>
 						</div>
 					</div>
@@ -303,18 +326,74 @@
 		<section id="partnerships" class="section">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    
+                    <div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/OIG3.jpg" alt="Image 2">
+								<div class="card-text">田區認養 讓企業端共同參與作物生長，以實地行動支持在地友善農民，落實環境友善。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/OIG4.nENA6XFI4W_q3FpHn.jpg" alt="Image 2">
+								<div class="card-text">員工家庭日 依據不同利害相關人，設計家庭日旅遊活動，融入在地客家文化，產生集體記憶，增強企業凝聚力。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/OIG2.jpg" alt="Image 2">
+								<div class="card-text">果醬禮盒 依據企業形象，設計客製化商品禮盒，不僅承載永續理念，亦能傳遞企業理念。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/OIG37533.jpg" alt="Image 2">
+								<div class="card-text">員工餐廳 農產品會因大小不符合市場規格、賣相不佳、生產過剩而成為格外品，但其營養價值是相同的。藉由員工餐廳烹飪供餐給員工，不僅食得安心，也能實踐友善環境。</div>
+						</div>
+					</div>
 				</div>
                 <div class="swiper-pagination"></div>
             </div>
             <div class="text-content">
                 <h2 class="section-title">與企業合作</h2>
-                <p>台灣農產運銷結構集中使得農民的議價能力低，農民常常要「賭」農產的產量和價格，不斷面對菜土菜金的波動。</p>
-				<p>SDGs12責任消費與生產(以穩定有品質的服務建立信任的產銷關係)</p>
-				<p>SDGs15陸地生態(支持友善耕作，維持農田的生物多樣性)</p>
-				<p>SDGs17多元夥伴關係(建立夥伴關係，共同協力促進永續目標)</p>
+				<p>透過企業資源進入，支持在地經濟網絡發展。讓企業藉由社會參與重新反思及調整企業體質，使其進行改革變得更好。</p>
+				<p>建立品牌和信譽：提升產品質量與可靠性，保持透明和誠信。</p>
+				<p>提供獨特價值：專業農業知識與技術，持續創新。</p>
+				<p>構建合作網絡：建立合作夥伴關係，參與行業活動。</p>
+				<p>提供綜合解決方案：整合供應鏈，推行可持續發展。</p>
+				<p>提高市場可見度：品牌推廣，增加消費者參與。</p>
+
             </div>
         </section>
+			<div class="swiper-container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+						<div class="card2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-08-07%20194924.png" alt="Image 2">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-08-07%20195001.png" alt="Image 2">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-08-07%20195050.png" alt="Image 2">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-08-07%20195127.png" alt="Image 2">	
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card2">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-08-07%20195146.png" alt="Image 2">	
+						</div>
+					</div>
+				</div>
+                <div class="swiper-pagination"></div>
+            </div>
 		
 		<section id="contact">
             <h2 class="section-title">聯絡我們</h2>
@@ -375,6 +454,29 @@
             const links = document.querySelectorAll('nav a');
             links.forEach(link => link.style.display = link.style.display === 'block' ? 'none' : 'block');
         }
+		// Select all sections
+        const sections = document.querySelectorAll('.section');
+
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Remove the existing animation class if it exists
+                    entry.target.classList.remove('animate');
+                    
+                    // Trigger reflow to restart the animation
+                    void entry.target.offsetWidth;
+                    
+                    // Add the animation class
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Observe each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
 		
     </script>
 </body>
