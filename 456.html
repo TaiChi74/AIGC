@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuu</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+		@keyframes mymove {
+		  0%   {top: 100px;}
+		  25%  {top: 200px;}
+		  75%  {top: 50px}
+		  100% {top: 0px;}
+		  from {
+				transform: scale(0.5);
+                opacity: 0;
+          }
+          to {
+			transform: scale(1);
+			opacity: 1;
+          }
+		}
+		
+		h1, h2, p {
+			color: white; text-shadow: black 0.1em 0.1em 0.2em
+		}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: url(https://media.canva.com/v2/image-resize/format:JPG/height:600/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2Fwiez8%2FMAGNCrwiez8%2F1%2Fp.jpg/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAJ9m0CVGcENXpJ4PLsryI6vKiT_1sB2ESTNywKEd8MGL&exp=1723029734&osig=AAAAAAAAAAAAAAAAAAAAAM6dJwh0ZuEs9-xNoeZ_xPFGVZ7teg-s28G-Cx0bJNhu&signer=media-rpc&x-canva-quality=screen) no-repeat center center/cover;
+            color: white;
+            padding: 200px 0;
+            text-align: center;
+            position: relative;
+			animation: mymove 3s forwards;	
+        }
+		main {
+            padding: 100px 20px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+		nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: top 0.3s;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+		
+        .menu-toggle {
+            display: none;
+        }
+
+        .section {
+			display: flex;
+            position: relative;
+            margin-bottom: 7px;
+            padding: 10px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		
+        .swiper-container {
+            width: 70%;
+            height: 70%;
+			max-height: 740px;
+			overflow: hidden;
+        }
+		.swiper-container2 {
+            width: 100%;
+        }
+		.swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+        }
+		
+		.card {
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-text {
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        /* 自定義分頁器 */
+        .swiper-pagination {
+            position: absolute;	
+            bottom: 10px; /* 距離底部的距離 */
+            transform: translateX(0%); /* 水平居中 */
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* 分頁器項目之間的間距 */
+            z-index: 10; /* 確保分頁器在圖片上方 */
+            padding: 0 20px; /* 增加內邊距以擴展分頁器的顯示區域 */
+            box-sizing: border-box; /* 確保內邊距計算在總寬度內 */
+        }
+
+        .swiper-pagination-bullet {
+            width: 200px; /* 增加寬度 */
+            height: 6px; /* 增加高度 */
+            background-color: #bbb;
+            border-radius: 3px;
+            opacity: 1;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #717171;
+            transform: scale(1.2);
+        }
+		.text-content {
+            flex: 1;
+            padding: 0 20px;
+            font-size: 1.2em;
+        }
+		footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+	<header>
+		<div class="w3-container w3-center w3-animate-zoom">
+		  <h1>儂好</h1>
+		  <h2>與農村共生、共好</p>
+		</div>
+    </header>
+    <nav id="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <a href="#about-us">關於我們</a>
+        <a href="#products">所有商品</a>
+        <a href="#activities">活動內容</a>
+        <a href="#partnerships">與企業合作</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+	<main>
+		
+		<section id="about-us" class="section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E9%B3%B3%E6%A2%A8IP.jpeg" alt="Image 1">
+								<div class="card-text">春-鳳梨 鳳梨可食用重量占比約為33%，其餘為農業剩餘資材，其極易腐敗，因此將果皮設計成服飾。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%A5%BF%E7%93%9CIP.jpeg" alt="Image 2">
+								<div class="card-text">夏-西瓜 西瓜在快到採收期時，需要先經由蓋章師傅鑑定西瓜是否有達到出貨標準，才能蓋上印章。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/upload_eefa1a1f3d7f2e91755546a636ed4de7.jpeg" alt="Image 2">
+								<div class="card-text">秋-柚子 柚子生長在樹上，如果沒有將果樹矮化會不便採摘，因此需要器具協助採收工作。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/upload_ea2e9723a85728ea52b3bc328bfbc24b.jpg" alt="Image 2">
+								<div class="card-text">冬-草莓 草莓是冬季的限定水果，有著可愛的外表，深受大家喜愛。</div>
+						</div>
+					</div>
+				</div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">關於我們</h2>
+                <p>「儂好」是一家致力於推廣在地文化、發展另類經濟網絡的社會企業。我們希望透過創新兼具永續性商業模式,與生態、消費者、生產者和土地共好。</p>
+				<p>期望透過「農好」推廣在地文化，發展另類經濟網絡，並向社會傳遞與生態、消費者、生產者與土地共好的理念。以行動落實永續目標，兼顧經濟與社會發展。</p>
+				<p>經濟:不只是商品買賣和勞雇，是生產、分配、流通、消費活動和關係的系統。</p>
+            </div>
+        </section>
+		
+		<section id="products" class="section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/upload_6836d8797ff35791261d669bce2d92c9.jpg" alt="Image 1">
+								<div class="card-text">帆布手提袋不僅上課，或是外出購物都能重複使用。</div>
+						</div>
+					</div>
+                    <div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E9%B3%B3%E6%A2%A8%E7%94%A2%E5%93%81.jfif" alt="Image 1">
+								<div class="card-text">鳳梨從種植到採收要經歷18個月的時間，需要有耐心。口感酸甜多汁</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%A5%BF%E7%93%9C%E7%94%A2%E5%93%81.jpg" alt="Image 2">
+								<div class="card-text">西瓜是夏季的消暑水果，口感脆甜多汁。黑美人西瓜相較於大西瓜更適合小家庭食用。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E6%96%87%E6%97%A6%E7%94%A2%E5%93%81.JPG" alt="Image 2">
+								<div class="card-text">文旦是柑橘類，表皮精油胞充滿香氣。果肉柔軟多汁帶有些許苦味。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E8%8D%89%E8%8E%93%E7%94%A2%E5%93%81.JPG" alt="Image 2">
+								<div class="card-text">種植草莓的過程中會面臨多種病蟲害的威脅，堅持不噴灑農藥，希望讓大家吃得安心，也能支持在地青農，實現共好目標。</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://raw.githubusercontent.com/TaiChi74/AIGC/main/%E6%9E%9C%E9%86%AC.jpg" alt="Image 2">
+								<div class="card-text">草莓果醬 鳳梨果醬</div>
+						</div>
+					</div>
+				</div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">所有商品</h2>
+                <p>春 - 鳳梨 代表春天的新生與活力</p>
+				<p>夏 - 西瓜 象徵夏日的消暑與甜美</p>
+				<p>秋 - 柚子 呈現秋季的豐收與團聚</p>
+				<p>冬 - 草莓 代表冬日的甜蜜與溫馨</p>
+            </div>
+        </section>	
+
+		<section id="activities" class="section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 1">
+								<div class="card-text">農作物大師畫廊(猜謎關卡):小孩畫出主持人指定的農作物,由父母猜出答案,猜中5題則通過關卡</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+								<div class="card-text">手做關卡:父母與小孩一起製作出一個樹葉的拓印,製作完成的拓印能印在農場準備的帆布袋上</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+								<div class="card-text">種植關卡:主持人講解如何種植四季豆,由父母和小孩共同從完成製作盆栽和種植種子</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<img src="https://image.hkhl.hk/f/1024p0/0x0/100/none/de6e35a43b9f3f32179f515bec47323d/2024-04/301.JPG" alt="Image 2">
+								<div class="card-text">活動獎勵:完成關卡的組別皆可獲得由農場方製作的當季水果製成的冰品</div>
+						</div>
+					</div>
+				</div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">食農教育活動</h2>
+                <p>完成各項關卡的參與者,均可獲得由農場製作的當季水果冰品。活動所得將用於支持在地小農,以及持續推動食農教育計劃。</p>
+				<p>透過這個活動,我們希望能夠喚起大家對永續農業的重視,共同為美好的未來而努力。</p>
+				<p>從小培養永續意識透過親手種植四季豆，讓孩子們了解農作物的生長過程，培養對大自然的尊重和感謝。</p>
+				<p>孩子們藉由觀察農作物特色，繪畫出農作物。增強對作物及環境的觀察能力。製作樹葉拓印，讓小朋友可以發揮創意，和家人共同創造獨特作品。</p>
+            </div>
+        </section>
+		<section id="partnerships" class="section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+				</div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">與企業合作</h2>
+                <p>台灣農產運銷結構集中使得農民的議價能力低，農民常常要「賭」農產的產量和價格，不斷面對菜土菜金的波動。</p>
+				<p>SDGs12責任消費與生產(以穩定有品質的服務建立信任的產銷關係)</p>
+				<p>SDGs15陸地生態(支持友善耕作，維持農田的生物多樣性)</p>
+				<p>SDGs17多元夥伴關係(建立夥伴關係，共同協力促進永續目標)</p>
+            </div>
+        </section>
+		
+		<section id="contact">
+            <h2 class="section-title">聯絡我們</h2>
+            <p>如有任何問題或合作需求，請聯絡我們。</p>
+        </section>
+	</main>
+	<footer>
+        <p>Copyright © 儂好 著作權所有</p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+			autoplay: {
+				delay: 5000, // 自动播放间隔时间
+				disableOnInteraction: false, // 用户操作时是否暂停自动播放
+			},
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true, // 讓滑動循環
+        });
+		
+		const swiper2 = new Swiper('.swiper-container2', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+			autoplay: {
+				delay: 5000, // 自动播放间隔时间
+				disableOnInteraction: false, // 用户操作时是否暂停自动播放
+			},
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true, // 讓滑動循環
+        });
+		
+		let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Downscroll
+                navbar.style.top = '-70px'; // Adjust according to navbar height
+            } else {
+                // Upscroll
+                navbar.style.top = '0';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        }, false);
+
+        function toggleMenu() {
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => link.style.display = link.style.display === 'block' ? 'none' : 'block');
+        }
+		
+    </script>
+</body>
+</html>
